@@ -86,12 +86,12 @@ const PostProject = () => {
 
   return (
     <div className="min-h-screen bg-gradient-subtle">
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-4 py-6 md:py-8">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-bold mb-2">Post a New Project</h1>
-          <p className="text-muted-foreground mb-8">Share your project idea and find the perfect teammates</p>
+          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2">Post a New Project</h1>
+          <p className="text-sm md:text-base text-muted-foreground mb-6 md:mb-8">Share your project idea and find the perfect teammates</p>
 
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
             <Card className="shadow-md">
               <CardHeader>
                 <CardTitle>Project Details</CardTitle>

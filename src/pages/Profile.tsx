@@ -58,58 +58,58 @@ const userProfile = {
 const Profile = () => {
   return (
     <div className="min-h-screen bg-gradient-subtle">
-      <div className="container mx-auto px-4 py-8">
-        <div className="max-w-5xl mx-auto space-y-6">
+      <div className="container mx-auto px-4 py-6 md:py-8">
+        <div className="max-w-5xl mx-auto space-y-4 md:space-y-6">
           <Card className="shadow-lg">
-            <CardHeader className="pb-4">
-              <div className="flex items-start justify-between">
+            <CardHeader className="p-4 md:p-6 pb-4">
+              <div className="flex flex-col sm:flex-row items-start justify-between gap-4">
                 <div className="flex-1">
-                  <CardTitle className="text-3xl mb-2">{userProfile.name}</CardTitle>
-                  <CardDescription className="text-base space-y-1">
+                  <CardTitle className="text-2xl md:text-3xl mb-2">{userProfile.name}</CardTitle>
+                  <CardDescription className="text-sm md:text-base space-y-1">
                     <div className="flex items-center gap-2">
-                      <MapPin className="h-4 w-4" />
-                      {userProfile.university} • {userProfile.major} • {userProfile.year}
+                      <MapPin className="h-3 w-3 md:h-4 md:w-4" />
+                      <span className="text-xs md:text-sm">{userProfile.university} • {userProfile.major} • {userProfile.year}</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <Mail className="h-4 w-4" />
-                      {userProfile.email}
+                      <Mail className="h-3 w-3 md:h-4 md:w-4" />
+                      <span className="text-xs md:text-sm">{userProfile.email}</span>
                     </div>
                   </CardDescription>
                 </div>
-                <Button variant="outline">
-                  <Edit className="mr-2 h-4 w-4" />
-                  Edit Profile
+                <Button variant="outline" size="sm" className="w-full sm:w-auto">
+                  <Edit className="mr-2 h-3 w-3 md:h-4 md:w-4" />
+                  <span className="text-xs md:text-sm">Edit Profile</span>
                 </Button>
               </div>
             </CardHeader>
-            <CardContent>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div className="flex items-center gap-3 p-4 bg-muted/50 rounded-lg">
-                  <Star className="h-8 w-8 fill-accent text-accent" />
+            <CardContent className="p-4 md:p-6">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+                <div className="flex items-center gap-3 p-3 md:p-4 bg-muted/50 rounded-lg">
+                  <Star className="h-6 w-6 md:h-8 md:w-8 fill-accent text-accent" />
                   <div>
-                    <p className="text-2xl font-bold">{userProfile.score}</p>
-                    <p className="text-sm text-muted-foreground">TeamSync Score</p>
+                    <p className="text-xl md:text-2xl font-bold">{userProfile.score}</p>
+                    <p className="text-xs md:text-sm text-muted-foreground">TeamSync Score</p>
                   </div>
                 </div>
-                <div className="flex items-center gap-3 p-4 bg-muted/50 rounded-lg">
-                  <Briefcase className="h-8 w-8 text-primary" />
+                <div className="flex items-center gap-3 p-3 md:p-4 bg-muted/50 rounded-lg">
+                  <Briefcase className="h-6 w-6 md:h-8 md:w-8 text-primary" />
                   <div>
-                    <p className="text-2xl font-bold">{userProfile.totalProjects}</p>
-                    <p className="text-sm text-muted-foreground">Total Projects</p>
+                    <p className="text-xl md:text-2xl font-bold">{userProfile.totalProjects}</p>
+                    <p className="text-xs md:text-sm text-muted-foreground">Total Projects</p>
                   </div>
                 </div>
-                <div className="flex items-center gap-3 p-4 bg-muted/50 rounded-lg">
-                  <Users className="h-8 w-8 text-primary" />
+                <div className="flex items-center gap-3 p-3 md:p-4 bg-muted/50 rounded-lg">
+                  <Users className="h-6 w-6 md:h-8 md:w-8 text-primary" />
                   <div>
-                    <p className="text-2xl font-bold">{userProfile.completedProjects}</p>
-                    <p className="text-sm text-muted-foreground">Completed</p>
+                    <p className="text-xl md:text-2xl font-bold">{userProfile.completedProjects}</p>
+                    <p className="text-xs md:text-sm text-muted-foreground">Completed</p>
                   </div>
                 </div>
               </div>
             </CardContent>
           </Card>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
             <Card className="shadow-md">
               <CardHeader>
                 <CardTitle>Skills & Expertise</CardTitle>
